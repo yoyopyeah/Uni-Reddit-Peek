@@ -33,7 +33,7 @@ def main():
         retrieve_data(subreddit, headers, f)
 
 def retrieve_data(subredit, headers, out_file):
-    params = {'limit' : 100}
+    params = {'limit' : 1000}
     url = "https://oauth.reddit.com/r/{}/new".format(subredit)
     res = requests.get(url, headers=headers, params=params)
     for i in range(100):
